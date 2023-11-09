@@ -1,0 +1,15 @@
+1 Classes e Objetos: Ele deve criar várias classes representando diferentes entidades ou conceitos. Cada classe deve ter propriedades e métodos apropriados que encapsulem o comportamento e os estados esperados.
+
+2 Encapsulamento: As classes devem demonstrar princípios de encapsulamento, usando modificadores de acesso (como private, public, etc.) para proteger os dados e expor apenas o necessário através de métodos públicos.
+
+3 Construtores: Uso de construtores para inicializar objetos de maneira apropriada.
+
+4 Herança: Criação de uma hierarquia de classes onde as classes filhas herdam propriedades e métodos de uma classe pai, mas também podem ter suas próprias características únicas.
+
+5 Polimorfismo: Implementação de métodos que têm o mesmo nome mas comportamentos diferentes quando herdados, demonstrando polimorfismo. Isso pode ser feito através de sobreposição (override) ou sobrecarga (overload) de métodos.
+
+6 Interfaces ou Classes Abstratas: Uso de interfaces ou classes abstratas para criar contratos que outras classes devem implementar, mostrando um entendimento de polimorfismo e design orientado a contratos.
+
+7 Métodos Virtuais: Uso de métodos virtuais em classes base que podem ser sobrepostos em classes derivadas.
+
+8 Coleções: Uso de coleções (como listas, dicionários, etc.) para gerenciar conjuntos de objetos.
