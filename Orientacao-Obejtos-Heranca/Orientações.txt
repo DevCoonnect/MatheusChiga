@@ -1,4 +1,4 @@
-1 Classes e Objetos: Ele deve criar várias classes representando diferentes entidades ou conceitos. Cada classe deve ter propriedades e métodos apropriados que encapsulem o comportamento e os estados esperados.
+1 Classes e Objetos: Criar várias classes representando diferentes entidades ou conceitos. Cada classe deve ter propriedades e métodos apropriados que encapsulem o comportamento e os estados esperados.
 
 2 Encapsulamento: As classes devem demonstrar princípios de encapsulamento, usando modificadores de acesso (como private, public, etc.) para proteger os dados e expor apenas o necessário através de métodos públicos.
 
