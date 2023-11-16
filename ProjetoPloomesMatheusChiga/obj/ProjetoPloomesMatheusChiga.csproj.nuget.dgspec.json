@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\MatheusChiga\\source\\repos\\ProjetoPloomesMatheusChiga\\ProjetoPloomesMatheusChiga\\ProjetoPloomesMatheusChiga.csproj": {}
+    "C:\\Users\\MatheusChiga\\source\\repos\\MatheusChiga\\ProjetoPloomesMatheusChiga\\ProjetoPloomesMatheusChiga.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MatheusChiga\\source\\repos\\ProjetoPloomesMatheusChiga\\ProjetoPloomesMatheusChiga\\ProjetoPloomesMatheusChiga.csproj": {
+    "C:\\Users\\MatheusChiga\\source\\repos\\MatheusChiga\\ProjetoPloomesMatheusChiga\\ProjetoPloomesMatheusChiga.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MatheusChiga\\source\\repos\\ProjetoPloomesMatheusChiga\\ProjetoPloomesMatheusChiga\\ProjetoPloomesMatheusChiga.csproj",
+        "projectUniqueName": "C:\\Users\\MatheusChiga\\source\\repos\\MatheusChiga\\ProjetoPloomesMatheusChiga\\ProjetoPloomesMatheusChiga.csproj",
         "projectName": "ProjetoPloomesMatheusChiga",
-        "projectPath": "C:\\Users\\MatheusChiga\\source\\repos\\ProjetoPloomesMatheusChiga\\ProjetoPloomesMatheusChiga\\ProjetoPloomesMatheusChiga.csproj",
+        "projectPath": "C:\\Users\\MatheusChiga\\source\\repos\\MatheusChiga\\ProjetoPloomesMatheusChiga\\ProjetoPloomesMatheusChiga.csproj",
         "packagesPath": "C:\\Users\\MatheusChiga\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MatheusChiga\\source\\repos\\ProjetoPloomesMatheusChiga\\ProjetoPloomesMatheusChiga\\obj\\",
+        "outputPath": "C:\\Users\\MatheusChiga\\source\\repos\\MatheusChiga\\ProjetoPloomesMatheusChiga\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MatheusChiga\\AppData\\Roaming\\NuGet\\NuGet.Config",
