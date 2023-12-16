@@ -1,5 +1,6 @@
 ﻿using ProjetoPloomesMatheusChiga.Modelos;
 using ProjetoPloomesMatheusChiga.Modelos.Enumerados;
+using System.ComponentModel;
 
 namespace ProjetoPloomesMatheusChiga;
 
@@ -16,25 +17,24 @@ public class Treino
 
     public Objetivo Objetivo { get; set; }
 
-    public List<Exercicio> Exercicios
-    {
-        get { return _exercicios; }
-        set 
-        {
-            if (value == null)
-            {
-                Console.WriteLine("A lista de exercícios não pode ser nula.");
-            }
-            else {
-                _exercicios = value; 
-            } 
-        }
-    }
+    public List<Exercicio> Exercicios{ get; private set; }
     public Treino(Tipo tipo, GrauDeDificuldade grauDeDificuldade, Objetivo objetivo, List<Exercicio> exercicios)
     {
         Tipo = tipo;
         GrauDeDificuldade = grauDeDificuldade;
         Objetivo = objetivo;
+
+        if (exercicios is null || exercicios.Count == 0)
+        {
+            throw new ArgumentException("A lista de exercícios não pode ser nula ou vazia");
+        }
+
         Exercicios = exercicios ?? new List<Exercicio>();
+    }
+
+    public void AdicionarExercicio(string nome, int descanso, string repeticoes)
+    {
+        var exercicio = new Exercicio(nome, descanso, repeticoes);
+        Exercicios.Add(exercicio);
     }
 }

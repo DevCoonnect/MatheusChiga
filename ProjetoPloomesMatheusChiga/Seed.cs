@@ -23,17 +23,11 @@ public class Seed
         return usuarios;
     }  
 
-
     private static void AdicionarTreinoAoUsuario(Usuario usuario)
     {
         // Exemplo de criação de um treino
-        Treino treino = new Treino(Tipo.Peito, GrauDeDificuldade.Intermediario, Objetivo.Hipertrofiar, new List<Exercicio>());
-
-        // Exemplo de criação de um exercício
-        Exercicio exercicio = new Exercicio("Supino", 60, "3x10");
-
-        // Adicionar o exercício ao treino
-        treino.Exercicios.Add(exercicio);
+        Treino treino = new Treino(Tipo.Peito, GrauDeDificuldade.Intermediario, Objetivo.Hipertrofiar, new List<Exercicio> { new Exercicio("Cruxifixo", 60, "4x10") });
+        treino.AdicionarExercicio("Supino", 120, "4x10");
 
         // Adicionar o treino ao usuário
         usuario.AdicionarTreino(DiaDaSemana.Segunda, treino);

@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Matheus\\.nuget\\packages\\": {}
+    "C:\\Users\\MatheusChiga\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Download\\Projeto\\MatheusChiga\\ProjetoPloomesMatheusChiga\\ProjetoPloomesMatheusChiga.csproj",
+      "projectUniqueName": "C:\\Users\\MatheusChiga\\source\\repos\\Projeto\\MatheusChiga\\ProjetoPloomesMatheusChiga\\ProjetoPloomesMatheusChiga.csproj",
       "projectName": "ProjetoPloomesMatheusChiga",
-      "projectPath": "D:\\Download\\Projeto\\MatheusChiga\\ProjetoPloomesMatheusChiga\\ProjetoPloomesMatheusChiga.csproj",
-      "packagesPath": "C:\\Users\\Matheus\\.nuget\\packages\\",
-      "outputPath": "D:\\Download\\Projeto\\MatheusChiga\\ProjetoPloomesMatheusChiga\\obj\\",
+      "projectPath": "C:\\Users\\MatheusChiga\\source\\repos\\Projeto\\MatheusChiga\\ProjetoPloomesMatheusChiga\\ProjetoPloomesMatheusChiga.csproj",
+      "packagesPath": "C:\\Users\\MatheusChiga\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\MatheusChiga\\source\\repos\\Projeto\\MatheusChiga\\ProjetoPloomesMatheusChiga\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Matheus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\MatheusChiga\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -61,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
