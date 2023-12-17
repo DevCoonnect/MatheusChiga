@@ -54,18 +54,25 @@ public class Exercicio
 
     public Exercicio(string nome, int descanso, string repeticoes)
     {
+        Validator(nome, descanso, repeticoes);
         Nome = nome;
         Descanso = descanso;
         Repeticoes = repeticoes;
     }
 
-    public static void AdicionarExercicio(List<Exercicio> listaExercicios, Exercicio novoExercicio)
+    public void Validator(string nome, int descanso, string repeticoes)
     {
-        if (listaExercicios == null)
+        if (string.IsNullOrEmpty(nome))
         {
-            Console.WriteLine("A lista de exercícios não pode ser nula.");
+            throw new ArgumentException("Nome não pode ser nulo.");
         }
-
-        listaExercicios!.Add(novoExercicio);
+        if (descanso < 0)
+        {
+            throw new ArgumentException("Descanso não pode ser menor que 0.");
+        }
+        if (string.IsNullOrEmpty(repeticoes))
+        {
+            throw new ArgumentException("Nome não pode ser nulo.");
+        }
     }
 }
