@@ -1,30 +1,29 @@
 ﻿using ProjetoPloomesMatheusChiga.Modelos.Enumerados;
 using ProjetoPloomesMatheusChiga.Modelos;
+using ProjetoPloomesMatheusChiga.Modelos.Usuarios;
 
 namespace ProjetoPloomesMatheusChiga;
 
 public class Seed
 {
-    public static List<Usuario> InicializarDados()
+    public static List<Professor> InicializarDados()
     {
-        List<Usuario> usuarios = new List<Usuario>();
+        List<Professor> professores = new List<Professor>();
+        List<Aluno> alunos = new List<Aluno>();
 
         // Exemplo de criação de um usuário
-        Usuario usuario1 = new Usuario("Nome1", "Senha1", Genero.Masculino);
-        AdicionarTreinoAoUsuario(usuario1);
+        Professor professor1 = new Professor(123, "Nome1", "Senha1", Genero.Masculino);
+        Aluno aluno1 = new Aluno(1234,"Nome2", "Senha2", Genero.Masculino);
+        AdicionarTreinoAoUsuario(professor1);
 
-        // Exemplo de criação de outro usuário
-        Usuario usuario2 = new Usuario("Nome2", "Senha2", Genero.Feminino);
-        AdicionarTreinoAoUsuario(usuario2);
+        alunos.Add(aluno1); 
+        professores.Add(professor1);
 
-        usuarios.Add(usuario1);
-        usuarios.Add(usuario2);
-
-        return usuarios;
+        return professores;
     }  
 
 
-    private static void AdicionarTreinoAoUsuario(Usuario usuario)
+    private static void AdicionarTreinoAoUsuario(Professor professor)
     {
         // Exemplo de criação de um treino
         Treino treino = new Treino(Tipo.Peito, GrauDeDificuldade.Intermediario, Objetivo.Hipertrofiar, new List<Exercicio>());
@@ -36,6 +35,6 @@ public class Seed
         treino.Exercicios.Add(exercicio);
 
         // Adicionar o treino ao usuário
-        usuario.AdicionarTreino(DiaDaSemana.Segunda, treino);
+        professor.AdicionarTreino(DiaDaSemana.Segunda, treino);
     }
 }

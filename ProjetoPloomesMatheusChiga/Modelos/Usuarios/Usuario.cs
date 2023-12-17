@@ -1,9 +1,10 @@
 ﻿using ProjetoPloomesMatheusChiga.Modelos.Enumerados;
 
-namespace ProjetoPloomesMatheusChiga.Modelos;
+namespace ProjetoPloomesMatheusChiga.Modelos.Usuarios;
 
-public class Usuario
+public abstract class Usuario : ITreino
 {
+    public int Matricula { get; set; }
     private string _nome;
     public string NomeUsuario
     {
@@ -87,11 +88,12 @@ public class Usuario
     }
     public Dictionary<DiaDaSemana, Treino> Treinos { get; private set; }
 
-    public Usuario(string nomeUsuario, string senha, Genero gereno)
+    public Usuario(int matricula, string nomeUsuario, string senha, Genero genero)
     {
+        Matricula = matricula;
         NomeUsuario = nomeUsuario;
         Senha = senha;
-        Genero = gereno;
+        Genero = genero;
         Treinos = new Dictionary<DiaDaSemana, Treino>
         {
             {
@@ -99,27 +101,24 @@ public class Usuario
             },
             {
                 DiaDaSemana.Terca, null
-            },            
+            },
             {
                 DiaDaSemana.Quarta, null
-            },            
+            },
             {
                 DiaDaSemana.Quinta, null
-            },            
+            },
             {
                 DiaDaSemana.Sexta, null
-            },            
+            },
             {
                 DiaDaSemana.Sabado, null
-            },            
+            },
             {
                 DiaDaSemana.Domingo, null
             }
         };
     }
 
-    public void AdicionarTreino(DiaDaSemana diaDaSemana, Treino treino)
-    {
-        Treinos[diaDaSemana] = treino;
-    }
+    public abstract void VisualizarTreino();
 }

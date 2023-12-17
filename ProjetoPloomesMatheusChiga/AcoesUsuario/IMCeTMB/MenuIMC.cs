@@ -1,7 +1,6 @@
-﻿using ProjetoPloomesMatheusChiga.AcoesUsuario.Treino;
-using ProjetoPloomesMatheusChiga.Modelos;
+﻿using ProjetoPloomesMatheusChiga.Modelos;
 using ProjetoPloomesMatheusChiga.Modelos.Enumerados;
-using static System.Net.Mime.MediaTypeNames;
+using ProjetoPloomesMatheusChiga.Modelos.Usuarios;
 
 namespace ProjetoPloomesMatheusChiga.AcoesUsuario.IMC;
 
@@ -92,7 +91,7 @@ public class MenuIMC
                         CalcularTMB(usuario);
                         break;
                     case 0:
-                        Menu.ExibirMenu(usuario);
+                        Console.WriteLine("Exemplo");
                         break;
                     default:
                         Console.WriteLine("Opção inválida. Tente novamente.");

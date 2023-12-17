@@ -1,28 +1,28 @@
-﻿using ProjetoPloomesMatheusChiga.Modelos.Enumerados;
-using ProjetoPloomesMatheusChiga.AcoesUsuario;
-using ProjetoPloomesMatheusChiga.Modelos;
+﻿using ProjetoPloomesMatheusChiga.AcoesUsuario;
 using ProjetoPloomesMatheusChiga;
+using ProjetoPloomesMatheusChiga.Modelos;
 
 class Program
 {
     static void Main(string[] args)
     {
-        List<Usuario> usuarios = Seed.InicializarDados();
+        List<Professor> usuarios = Seed.InicializarDados();
 
         Autenticacao autenticacao = new Autenticacao(usuarios);
 
-        Usuario usuarioAutenticado = null;
+        Professor usuarioAutenticado = null;
 
         do
         {
             Console.Clear();
-            Console.Write("Nome de usuário: ");
-            string nomeUsuario = Console.ReadLine();
+            Console.Write("Digite a matrícula: ");
+            string inputMatricula = Console.ReadLine()!;
+            int.TryParse(inputMatricula, out int matricula);
 
-            Console.Write("Senha: ");
+            Console.Write("Digite sua senha: ");
             string senha = Console.ReadLine();
 
-            usuarioAutenticado = autenticacao.AutenticarUsuario(nomeUsuario, senha);
+            usuarioAutenticado = autenticacao.AutenticarUsuario(matricula, senha) as Professor;
 
             if (usuarioAutenticado == null)
             {
@@ -32,6 +32,10 @@ class Program
 
         } while (usuarioAutenticado == null);
 
-        Menu.ExibirMenu(usuarioAutenticado);
+        if (usuarioAutenticado is Professor)
+        {
+            Menu.ExibirMenuProfessor(usuarioAutenticado);
+        }
     }
+
 }
