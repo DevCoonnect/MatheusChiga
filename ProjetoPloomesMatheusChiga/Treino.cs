@@ -1,5 +1,4 @@
 ﻿using ProjetoPloomesMatheusChiga.Modelos;
-using ProjetoPloomesMatheusChiga.Modelos.Enumerados;
 using System.ComponentModel;
 
 namespace ProjetoPloomesMatheusChiga;

@@ -1,4 +1,4 @@
-﻿namespace ProjetoPloomesMatheusChiga.Modelos.Enumerados;
+﻿namespace ProjetoPloomesMatheusChiga.Modelos;
 
 public enum Tipo
 {

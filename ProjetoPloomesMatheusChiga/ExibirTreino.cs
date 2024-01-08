@@ -1,4 +1,4 @@
-﻿using ProjetoPloomesMatheusChiga.Modelos.Usuarios;
+﻿using ProjetoPloomesMatheusChiga.Modelos;
 using System.Text;
 
 namespace ProjetoPloomesMatheusChiga.AcoesUsuario.Treino;

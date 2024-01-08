@@ -2,10 +2,7 @@
 
 namespace ProjetoPloomesMatheusChiga;
 
-public class Seed
+public interface IMenu
 {
-    public void Inicializador(Usuario usuario) 
-    {
-
-    }
+    void Menu(Usuario usuario);
 }

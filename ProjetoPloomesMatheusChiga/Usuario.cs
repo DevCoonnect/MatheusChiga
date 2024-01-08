@@ -1,6 +1,4 @@
-﻿using ProjetoPloomesMatheusChiga.Modelos.Enumerados;
-
-namespace ProjetoPloomesMatheusChiga.Modelos.Usuarios;
+﻿namespace ProjetoPloomesMatheusChiga.Modelos;
 
 public abstract class Usuario : ITreino
 {

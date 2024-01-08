@@ -1,5 +1,4 @@
 ﻿using ProjetoPloomesMatheusChiga.Modelos;
-using ProjetoPloomesMatheusChiga.Modelos.Usuarios;
 
 namespace ProjetoPloomesMatheusChiga.AcoesUsuario;
 

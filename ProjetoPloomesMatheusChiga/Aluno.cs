@@ -1,7 +1,4 @@
-﻿using ProjetoPloomesMatheusChiga.Modelos.Enumerados;
-using ProjetoPloomesMatheusChiga.Modelos.Usuarios;
-
-namespace ProjetoPloomesMatheusChiga.Modelos;
+﻿namespace ProjetoPloomesMatheusChiga.Modelos;
 
 public class Aluno : Usuario
 {
