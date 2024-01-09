@@ -1,26 +1,21 @@
-﻿using ProjetoPloomesMatheusChiga.AcoesUsuario.Treino;
-using ProjetoPloomesMatheusChiga.Modelos;
+﻿using ProjetoPloomesMatheusChiga.Objeto;
+using ProjetoPloomesMatheusChiga.Interface;
 
-namespace ProjetoPloomesMatheusChiga;
+namespace ProjetoPloomesMatheusChiga.Menu;
 
-public class MenuProfessor : IMenu
+public class MenuAluno : IMenu
 {
-
     public void Menu(Usuario usuario)
     {
         bool continuarNoMenu = true;
         while (continuarNoMenu)
         {
             Console.Clear();
-            Console.WriteLine("Menu do Professor:");
-            Console.WriteLine("1. Lista de Alunos");
-            Console.WriteLine("2. Exibir Treino");
-            Console.WriteLine("3. Adicionar Treino");
-            Console.WriteLine("4. Remover Treino");
-            Console.WriteLine("5. Ficha do Aluno");
-            Console.WriteLine("6. Taxa Metabólica Basal");
-            Console.WriteLine("7. Índice de Massa Corporal");
-            Console.WriteLine("8. Sair");
+            Console.WriteLine("Menu do Aluno:");
+            Console.WriteLine("1. Exibir Treino");   //             --->    Acessar o Aluno para buscar seu treino
+            Console.WriteLine("2. Taxa Metabólica Basal"); //       --->    Acessar o Aluno em específico e verificar sua TMB
+            Console.WriteLine("3. Índice de Massa Corporal"); //    --->    Acessar o Aluno em específico e verificar seu IMC
+            Console.WriteLine("4. Sair"); //                        --->    Sair
 
             Console.WriteLine("Escolha uma opção:");
             if (int.TryParse(Console.ReadLine(), out int escolha))
@@ -28,13 +23,18 @@ public class MenuProfessor : IMenu
                 switch (escolha)
                 {
                     case 1:
+                        Console.Clear();
                         Console.WriteLine("Exibir Treino");
+                        Console.ReadKey();
                         break;
                     case 2:
-                        Console.WriteLine("Adicionar Treino");
+                        Console.Clear();
+                        Console.WriteLine("Taxa Metabólica Basal");
+                        Console.ReadKey();
                         break;
                     case 3:
                         Console.Clear();
+                        Console.WriteLine("Índice de Massa Corporal");
                         Console.ReadKey();
                         break;
                     case 4:

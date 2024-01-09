@@ -1,4 +1,4 @@
-﻿namespace ProjetoPloomesMatheusChiga.Modelos;
+﻿namespace ProjetoPloomesMatheusChiga.Enum;
 
 public enum Genero
 {

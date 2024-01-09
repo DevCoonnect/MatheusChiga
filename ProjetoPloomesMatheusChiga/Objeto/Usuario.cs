@@ -1,4 +1,7 @@
-﻿namespace ProjetoPloomesMatheusChiga.Modelos;
+﻿using ProjetoPloomesMatheusChiga.Enum;
+using ProjetoPloomesMatheusChiga.Interface;
+
+namespace ProjetoPloomesMatheusChiga.Objeto;
 
 public abstract class Usuario : ITreino
 {

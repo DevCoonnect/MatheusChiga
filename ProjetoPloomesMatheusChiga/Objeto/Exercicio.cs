@@ -1,4 +1,4 @@
-﻿namespace ProjetoPloomesMatheusChiga;
+﻿namespace ProjetoPloomesMatheusChiga.Objeto;
 
 public class Exercicio
 {

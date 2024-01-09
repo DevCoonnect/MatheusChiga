@@ -1,6 +1,6 @@
-﻿namespace ProjetoPloomesMatheusChiga.Modelos;
+﻿namespace ProjetoPloomesMatheusChiga.Enum;
 
-public enum Tipo
+public enum GrupoMuscular
 {
     Peito,
     Costas,

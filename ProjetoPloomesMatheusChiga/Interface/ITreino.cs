@@ -1,4 +1,4 @@
-﻿namespace ProjetoPloomesMatheusChiga.Modelos;
+﻿namespace ProjetoPloomesMatheusChiga.Interface;
 
 public interface ITreino
 {

@@ -1,5 +1,6 @@
-﻿namespace ProjetoPloomesMatheusChiga.Modelos;
+﻿using ProjetoPloomesMatheusChiga.Enum;
 
+namespace ProjetoPloomesMatheusChiga.Objeto;
 public class Aluno : Usuario
 {
     public int MatriculaProfessor { get; set; }

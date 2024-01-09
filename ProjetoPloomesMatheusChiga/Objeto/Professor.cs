@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ProjetoPloomesMatheusChiga.Enum;
 
-namespace ProjetoPloomesMatheusChiga.Modelos;
+namespace ProjetoPloomesMatheusChiga.Objeto;
 
 public class Professor : Usuario
 {
