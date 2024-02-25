@@ -11,42 +11,9 @@ public class MenuLogin
     {
         _professores = professores;
     }
-
-    public Usuario AutenticarUsuario(int matricula, string senha)
-    {
-        var professor = _professores.FirstOrDefault(u => u.Matricula == matricula);
-        if (professor is not null)
-        {
-            if (professor.Senha.Equals(senha))
-            {
-                return professor;
-            }
-            throw new ArgumentException("Cara a senha ta errada");
-        }
-        foreach (var professorIndex in _professores)
-        {
-            var aluno = professorIndex.Alunos.FirstOrDefault(u => u.Matricula == matricula);
-            if (aluno is not null)
-            {
-                if (aluno.Senha.Equals(senha))
-                {
-                    return aluno;
-                }
-                throw new ArgumentException("Cara a senha ta errada. ft professor Lotti");
-            }
-        }
-        return null;
-    }
-    public void RegistrarAluno()
-    {
-
-    }
-
     public void MenuParaLogar()
     {
-        //List<Professor> usuarios = Seed.Inicializador();
-        //MenuLogin autenticacao = new MenuLogin(usuarios);
-        Professor usuarioAutenticado = null;
+        Usuario usuarioAutenticado = null;
 
         do
         {
@@ -58,7 +25,7 @@ public class MenuLogin
             Console.Write("Digite sua senha: ");
             string senha = Console.ReadLine();
 
-            //usuarioAutenticado = autenticacao.AutenticarUsuario(matricula, senha) as Professor;
+            usuarioAutenticado = AutenticarUsuario(matricula, senha);
 
             if (usuarioAutenticado == null)
             {
@@ -68,11 +35,56 @@ public class MenuLogin
 
         } while (usuarioAutenticado == null);
 
-        IMenu menuProfessor = new MenuProfessor();
+        IMenu menu = GetMenu(usuarioAutenticado);
+        menu.Menu(usuarioAutenticado);
+    }
 
-        if (usuarioAutenticado is Professor)
+    private IMenu GetMenu(Usuario usuario)
+    {
+        return usuario switch
         {
-            menuProfessor.Menu(usuarioAutenticado);
+            Aluno _ => new MenuAluno(),
+            Professor _ => new MenuProfessor(),
+            _ => throw new InvalidOperationException("Tipo de usuário não suportado."),
+        };
+    }
+
+    public Usuario AutenticarUsuario(int matricula, string senha)
+    {
+        Professor professor = AutenticarProfessor(matricula, senha);
+
+        if (professor != null)
+        {
+            return professor;
         }
+
+        Aluno aluno = AutenticarAluno(matricula, senha);
+
+        return aluno;
+    }
+
+    public Professor AutenticarProfessor(int matricula, string senha)
+    {
+        Professor professor = _professores.FirstOrDefault(u => u.Matricula == matricula);
+
+        if (professor != null && professor.Senha.Equals(senha))
+        {
+            return professor;
+        }
+
+        return null;
+    }
+    public Aluno AutenticarAluno(int matricula, string senha)
+    {
+        foreach (var professorIndex in _professores)
+        {
+            Aluno aluno = professorIndex.Alunos.FirstOrDefault(u => u.Matricula == matricula);
+
+            if (aluno != null && aluno.Senha.Equals(senha))
+            {
+                return aluno;
+            }
+        }
+        throw new ArgumentException("Matrícula ou senha inválida para Aluno.");
     }
 }

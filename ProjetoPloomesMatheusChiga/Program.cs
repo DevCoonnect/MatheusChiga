@@ -1,7 +1,24 @@
-﻿class Program
+﻿using ProjetoPloomesMatheusChiga.Menu;
+using ProjetoPloomesMatheusChiga.Objeto;
+using ProjetoPloomesMatheusChiga;
+
+class Program
 {
     static void Main(string[] args)
     {
+        List<Professor> professores = Seed.Inicializador();
+        MenuLogin autenticacao = new MenuLogin(professores);
+        try
+        {
+            autenticacao.MenuParaLogar();
+        }
+        catch (ArgumentException ax)
+        {
+            Console.WriteLine(ax.Message);
+            Thread.Sleep(3000);
+            autenticacao.MenuParaLogar();
+        }
+        
         /*        
         Inicializadores:
         - Program.cs                        -->      Inserir método que inicializa Program.cs

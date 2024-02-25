@@ -28,23 +28,40 @@ public class MenuProfessor : IMenu
             {
                 switch (escolha)
                 {
+                    // Dentro da classe MenuProfessor
                     case 1:
+                        //Fazer métodos para diminuir complexidade do código.
                         Console.Clear();
-                        Console.WriteLine("Lista de alunos");
+                        Console.WriteLine("Lista de alunos:");
+                        foreach (var aluno in ((Professor)usuario).Alunos)
+                        {
+                            Console.WriteLine($"Matrícula: {aluno.Matricula}, Nome: {aluno.NomeUsuario}");
+                        }
                         Console.ReadKey();
                         break;
                     case 2:
                         Console.Clear();
-                        Console.WriteLine("Exibir Treino");
+                        Console.WriteLine("Exibir Treino de Aluno");
+                        Console.Write("Digite a matrícula do aluno: ");
+                        if (int.TryParse(Console.ReadLine(), out int matriculaAluno))
+                        {
+                            ((Professor)usuario).VisualizarTreinoAluno(matriculaAluno);
+                            //Não existe treino pressione em qualquer tecla para voltar
+                        }
+                        else
+                        {
+                            Console.WriteLine("Matrícula inválida. Tente novamente.");
+                        }
                         Console.ReadKey();
                         break;
                     case 3:
+                        //Implemente a lógica para adicionar treino com seleção de grau de dificuldade
                         Console.Clear();
                         Console.WriteLine("Adicionar Treino");
                         Console.ReadKey();
                         break;
-                    case 4:
-                        Console.Clear();
+                    case 4:                        
+                        Console.Clear();                        
                         Console.WriteLine("Remover Treino");
                         Console.ReadKey();
                         break;

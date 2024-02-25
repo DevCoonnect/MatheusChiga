@@ -15,18 +15,32 @@ public class Professor : Usuario
     public void AdicionarTreinoAluno(DiaDaSemana diaDaSemana, Treino treino, int matricula)
     {
         var aluno = Alunos.FirstOrDefault(a => a.Matricula == matricula);
-        aluno.Treinos[diaDaSemana] = treino;
+        aluno!.Treinos[diaDaSemana] = treino;
     }
 
     public void VisualizarTreinoAluno(int matricula)
     {
         var aluno = Alunos.FirstOrDefault(a => a.Matricula == matricula);
-        Console.WriteLine($"Aluno: {aluno.NomeUsuario}");
+        Console.WriteLine($"Aluno: {aluno!.NomeUsuario}");
         aluno.VisualizarTreino();
+    }
+
+    public void AdicionarTreinoAluno(DiaDaSemana diaDaSemana, Treino treino, int matricula, GrauDeDificuldade grauDeDificuldade)
+    {
+        var aluno = Alunos.FirstOrDefault(a => a.Matricula == matricula);
+        if (aluno != null)
+        {
+            aluno.Treinos[diaDaSemana] = new Treino(treino.Tipo, grauDeDificuldade, treino.Exercicios);
+        }
+        else
+        {
+            Console.WriteLine("Aluno não encontrado.");
+        }
     }
 
     public override void VisualizarTreino()
     {
         Console.WriteLine("T");
     }
+
 }
